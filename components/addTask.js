@@ -2,11 +2,10 @@ import { creaDateElement } from "./creaDateElement.js";
 import { createTask } from "./createTask.js";
 import { displayTask } from "./displayTask.js";
 
-const tasksList = JSON.parse(localStorage.getItem("task")) || [];
-
 export const addTask = (evento) => {
     evento.preventDefault();
 
+    const tasksList = JSON.parse(localStorage.getItem("task")) || [];
     const list = document.querySelector("[data-list]");
     const input = document.querySelector("[data-form-input]");
     const inputDate = document.querySelector("[data-form-date]");
